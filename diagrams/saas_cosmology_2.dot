@@ -1,0 +1,19 @@
+digraph SaaS_Architecture {
+    rankdir=LR;
+    node [shape=circle, style=filled, color=lightgrey];
+
+    subgraph cluster1 {
+        label = "User Provisioning";
+        style=rounded;
+        UserManagement [label="User Management"];
+        RBAC [label="Role-Based Access Control"];
+        SSO [label="Single Sign-On"];
+    }
+
+    UserManagement -> RBAC;
+    RBAC -> SSO;
+    SSO -> UserManagement;
+
+}
+
+

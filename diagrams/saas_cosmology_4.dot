@@ -1,0 +1,19 @@
+digraph SaaS_Architecture {
+    rankdir=LR;
+    node [shape=circle, style=filled, color=lightgrey];
+
+    subgraph cluster3 {
+        label = "Data Management";
+        style=rounded;
+        MultitenantDB [label="Multitenant Database"];
+        DataSecurity [label="Data Security"];
+        BackupRecovery [label="Backup and Recovery"];
+    }
+
+    MultitenantDB -> DataSecurity;
+    DataSecurity -> BackupRecovery;
+    BackupRecovery -> MultitenantDB;
+
+}
+
+

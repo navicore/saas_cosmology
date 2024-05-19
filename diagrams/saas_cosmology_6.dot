@@ -1,0 +1,19 @@
+digraph SaaS_Architecture {
+    rankdir=LR;
+    node [shape=circle, style=filled, color=lightgrey];
+
+    subgraph cluster5 {
+        label = "Security";
+        style=rounded;
+        AppSecurity [label="Application Security"];
+        NetworkSecurity [label="Network Security"];
+        Compliance [label="Compliance"];
+    }
+
+    AppSecurity -> NetworkSecurity;
+    NetworkSecurity -> Compliance;
+    Compliance -> AppSecurity;
+
+}
+
+

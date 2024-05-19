@@ -1,0 +1,19 @@
+digraph SaaS_Architecture {
+    rankdir=LR;
+    node [shape=circle, style=filled, color=lightgrey];
+
+    subgraph cluster4 {
+        label = "Operational Concerns";
+        style=rounded;
+        MonitoringLogging [label="Monitoring and Logging"];
+        PerformanceManagement [label="Performance Management"];
+        IncidentManagement [label="Incident Management"];
+    }
+
+    MonitoringLogging -> PerformanceManagement;
+    PerformanceManagement -> IncidentManagement;
+    IncidentManagement -> MonitoringLogging;
+
+}
+
+

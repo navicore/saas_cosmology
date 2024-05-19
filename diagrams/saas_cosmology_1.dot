@@ -1,0 +1,16 @@
+digraph SaaS_Architecture {
+    rankdir=LR;
+    node [shape=circle, style=filled, color=lightgrey];
+
+    subgraph cluster0 {
+        label = "Tenant Provisioning";
+        style=rounded;
+        TenantIsolation [label="Tenant Isolation"];
+        ProvisioningProcess [label="Provisioning Process"];
+        ResourceManagement [label="Resource Management"];
+    }
+
+    TenantIsolation -> ProvisioningProcess;
+    ProvisioningProcess -> Scalability;
+    ResourceManagement -> TenantIsolation;
+}

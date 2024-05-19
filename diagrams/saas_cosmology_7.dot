@@ -1,0 +1,19 @@
+digraph SaaS_Architecture {
+    rankdir=LR;
+    node [shape=circle, style=filled, color=lightgrey];
+
+    subgraph cluster6 {
+        label = "DevOps and CI/CD";
+        style=rounded;
+        CICD [label="CI/CD"];
+        IaC [label="Infrastructure as Code"];
+        EnvManagement [label="Environment Management"];
+    }
+
+    CICD -> IaC;
+    IaC -> EnvManagement;
+    EnvManagement -> CICD;
+
+}
+
+

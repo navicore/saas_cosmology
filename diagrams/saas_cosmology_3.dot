@@ -1,0 +1,19 @@
+digraph SaaS_Architecture {
+    rankdir=LR;
+    node [shape=circle, style=filled, color=lightgrey];
+
+    subgraph cluster2 {
+        label = "Core Services";
+        style=rounded;
+        AppLogic [label="Application Logic"];
+        Microservices [label="Microservices"];
+        APIGateway [label="API Gateway"];
+    }
+
+    AppLogic -> Microservices;
+    Microservices -> APIGateway;
+    APIGateway -> AppLogic;
+
+}
+
+
