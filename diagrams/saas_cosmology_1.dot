@@ -3,7 +3,7 @@ digraph SaaS_Architecture {
     node [shape=circle, style=filled, color=lightgrey];
 
     subgraph cluster0 {
-        label = "Tenant Provisioning";
+        label = "Tenant Provisioning?";
         style=rounded;
         TenantIsolation [label="Tenant Isolation"];
         ProvisioningProcess [label="Provisioning Process"];
