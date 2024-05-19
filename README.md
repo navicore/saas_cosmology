@@ -1,5 +1,5 @@
 
-![alt text](diagrams/saas_cosmology_1-png)
+![alt text](diagrams/saas_cosmology_1.png)
 
 ![alt text](saas_cosmology_2.png "Title")
 
