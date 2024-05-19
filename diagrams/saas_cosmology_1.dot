@@ -11,6 +11,6 @@ digraph SaaS_Architecture {
     }
 
     TenantIsolation -> ProvisioningProcess;
-    ProvisioningProcess -> Scalability;
+    ProvisioningProcess -> ResourceManagement;
     ResourceManagement -> TenantIsolation;
 }
